@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oblig2</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Bestilling av kinobiletter</h1>
+            <form class="form">
+                <div class="form-group">
+                    <label>Velg film:</label>
+                    <label for="film"></label>
+                    <select id="film" class="form-control">
+                        <option value="0" selected disabled hidden>Velg film her</option>
+                        <option>Spiderman</option>
+                        <option>Superman</option>
+                        <option>Batman</option>
+                    </select>
+                    <div class="warning" id="film-warning"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="antall">Antall</label>
+                    <input type="number" class="form-control" id="antall" style="width: 60px">
+                    <div class="warning" id="antall-warning"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="fornavn">Fornavn</label>
+                    <input type="text" class="form-control" id="fornavn">
+                    <div class="warning" id="fornavn-warning"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="etternavn">Etternavn</label>
+                    <input type="text" class="form-control" id="etternavn">
+                    <div class="warning" id="etternavn-warning"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefonnr">Telefonnr</label>
+                    <input type="text" class="form-control" id="telefonnr">
+                    <div class="warning" id="telefonnr-warning"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="epost">Epost</label>
+                    <input type="email" class="form-control" id="epost">
+                    <div class="warning" id="epost-warning"></div>
+                </div>
+            </form>
+            <button id="button1" class="btn btn-primary" onclick="kjopBillett()">Kjøp billett</button>
+        </div>
+        <div class="col-md-6">
+            <h3>Alle kundene:</h3>
+            <div id="kundene"></div>
+            <button class="btn btn-danger" onclick="slettKundene()">Slett alle kunder</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
